@@ -45,6 +45,7 @@ function invocarMetodo(objeto, metodo) {
    // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
    // [NOTA]: no necesitar retornar nada.
    // Tu código:
+   return objeto[metodo]();
 
 }
 
@@ -152,14 +153,12 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
-
    objetoProducto.calcularPrecioDescuento = function() {
-      var descuento = (objetoProducto.precio * objetoProducto.porcentajeDeDescuento);
-      var fin = objetoProducto.precio - descuento;
-      return fin;
-   };
-   objetoProducto.calcularPrecioDescuento();
-  
+      var descuento = objetoProducto.precio * objetoProducto.porcentajeDeDescuento
+      return objetoProducto.precio - descuento;
+   }
+   return objetoProducto;
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
