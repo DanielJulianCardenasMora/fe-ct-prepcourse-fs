@@ -59,6 +59,7 @@ function map(array, cb) {
       return cb(i);
    });
    return x;
+   //listo
 }
 
 function filter(arrayOfStrings) {
