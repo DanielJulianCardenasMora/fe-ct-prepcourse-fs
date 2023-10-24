@@ -35,10 +35,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
-   var x = [];
-   x = array;
-   x.push(elemento);
-   return x;
+
+   array.push(elemento);
+   return array;
 
 }
 
@@ -122,8 +121,9 @@ function multiplicarArgumentos() {
       for (var i=0; i<arguments.length; i++){
          prod *= arguments[i];
       }
-      return prod;
+      
    }
+   return prod;
 }
 
 function cuentoElementos(array) {
@@ -131,7 +131,7 @@ function cuentoElementos(array) {
    // Tu código:
    mayores = 0;
    for (i=0; i<array.length; i++){
-      if (array[i] > 18){
+      if (array[i] > 18){ 
          mayores += 1;
       }
    }
@@ -239,6 +239,19 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   var arr = [];
+   var sum = num;
+   for (var i = 0; i < 10; i++) {
+     sum += 2;
+     if (sum === i) {
+       return "Se interrumpió la ejecución";
+       break;
+     } else {
+       arr.push(sum);
+     }
+   }
+   return arr;
+
 
 }
 
